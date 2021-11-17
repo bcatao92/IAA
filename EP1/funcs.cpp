@@ -69,7 +69,10 @@ int Selecao2(int* A,int i, int tam) {
 	
 	if (i < q){
 		
-		tam = tam-1;
+		//int aux;
+		//free(A[tam]);		
+	//	tam = tam-1;
+		
 		return Selecao2(A, i, tam);
 		
 		}
@@ -79,6 +82,7 @@ int Selecao2(int* A,int i, int tam) {
 		
 		for(int k = 0; k < q; k++){
 			A[k] = NULL;
+			
 		}
 		
 		return Selecao2(A,i, tam);

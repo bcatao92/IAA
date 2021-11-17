@@ -10,15 +10,19 @@ int main(){
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i, tam; 
+	int i,d, tam; 
 	
 //	Gerador();	
 	
-	printf("digite a potencia de 10 para o tamanho do array: ");
-
+	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	
+	scanf("%d", &d);
+	
+	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
+	
 	scanf("%d", &tam);
 	
-	tam = pow(10,tam);
+	tam = d*pow(10,tam);
 
 	A = (int*)malloc(tam*sizeof(int));
 
@@ -36,7 +40,7 @@ int main(){
 		printf("A[%i] = %i\n", k, A[k]);
 	}*/
 	
-	printf("Esta funcao busca o i-esimo menor valor. Digite o valor de i: ");
+	printf("Agora insira um numero i para que a funcao mostre o vetor correspondente no arranjo: ");
 	
 	scanf("%i", &i);
 	
@@ -52,4 +56,5 @@ int main(){
 	
 	return 0;
 }
+
 
