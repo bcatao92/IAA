@@ -69,9 +69,7 @@ int Selecao2(int* A,int i, int tam) {
 	
 	if (i < q){
 		
-		//int aux;
-		//free(A[tam]);		
-	//	tam = tam-1;
+		tam = tam-1;
 		
 		return Selecao2(A, i, tam);
 		

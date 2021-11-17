@@ -11,16 +11,19 @@ int main(){
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i, tam, q;
+	int i, tam, d, q;
 	//Gerador();	
-	printf("Esta função gera arranjos aleatórios baseados baseados em potências de 10 e encontra um número baseado num índice escolhido pelo usuário. Comece escolhendo o expoente de 10 que dará o tamanho do arranjo: ");
+	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	scanf("%d", &d);
+	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
 	scanf("%d", &tam);
-	tam = pow(10,tam);
+	tam = d*pow(10,tam);
 	A = (int*)malloc(tam*sizeof(int));
 	srand(time(NULL));
 	for (int j = 0; j < tam; j++){
 		A[j] = rand()%tam;
-	}
+		}
+	
 	
 	printf("Agora insira o índice do vetor procurado: ");
 	

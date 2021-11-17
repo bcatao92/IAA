@@ -10,9 +10,10 @@ int main(){
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i,d, tam; 
+	int i, d, tam; 
 	
-//	Gerador();	
+	
+	//	Gerador();	
 	
 	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	
@@ -23,7 +24,7 @@ int main(){
 	scanf("%d", &tam);
 	
 	tam = d*pow(10,tam);
-
+	
 	A = (int*)malloc(tam*sizeof(int));
 
 	srand(time(NULL));
