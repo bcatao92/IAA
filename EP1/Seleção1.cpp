@@ -4,15 +4,15 @@
 #include "funcs.cpp"
 #include <time.h>
 
-//Seleção1
+//Sele??o1
 int main(){
 	
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i, tam;
+	int i, tam; 
 	
-	//Gerador();	
+//	Gerador();	
 	
 	printf("digite a potencia de 10 para o tamanho do array: ");
 
@@ -32,9 +32,9 @@ int main(){
 	
 	quicksort(A, tam);
 	
-	for(int k = 0; k <tam; k++){
+/*	for(int k = 0; k <tam; k++){
 		printf("A[%i] = %i\n", k, A[k]);
-	}
+	}*/
 	
 	printf("Esta funcao busca o i-esimo menor valor. Digite o valor de i: ");
 	
@@ -52,3 +52,4 @@ int main(){
 	
 	return 0;
 }
+

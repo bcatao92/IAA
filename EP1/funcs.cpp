@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-int tam, i;
+int tam, i, q;
 int *A;
 
 void troca(int* a, int* b) {
@@ -55,3 +55,38 @@ void quicksort(int* A, int tam) {
     
   }
 }
+
+
+int Selecao2(int* A,int i, int tam) {
+	
+	q = partition(A, tam);
+	
+	if (tam ==1){
+		
+		return A[0];
+		
+	}
+	
+	if (i < q){
+		
+		tam = tam-1;
+		return Selecao2(A, i, tam);
+		
+		}
+		
+	else { 
+	if (i > q){
+		
+		for(int k = 0; k < q; k++){
+			A[k] = NULL;
+		}
+		
+		return Selecao2(A,i, tam);
+	}
+	}
+	return A[q];
+	}
+	
+	
+	
+	
