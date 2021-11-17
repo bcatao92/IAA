@@ -11,7 +11,7 @@ int main(){
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i, tam, d, q;
+	int i, tam, q;
 	//Gerador();	
 	printf("Esta função gera arranjos aleatórios baseados baseados em potências de 10 e encontra um número baseado num índice escolhido pelo usuário. Comece escolhendo o expoente de 10 que dará o tamanho do arranjo: ");
 	scanf("%d", &tam);
