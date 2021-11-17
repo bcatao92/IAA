@@ -13,15 +13,14 @@ int main(){
 	int i, d, tam; 
 	
 	
-	//	Gerador();	
+//	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Insira um numero inteiro, pressione enter, insira outro inteiro que sera a potencia de 10 que multiplicara o primeiro e pressione enter novamente: ");
+	//scanf("%d", &d);
+	scanf("%d", &d, &tam);
 	
-	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	//printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
 	
-	scanf("%d", &d);
-	
-	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
-	
-	scanf("%d", &tam);
+	//scanf("%d", &tam);
 	
 	tam = d*pow(10,tam);
 	
@@ -37,9 +36,6 @@ int main(){
 	
 	quicksort(A, tam);
 	
-/*	for(int k = 0; k <tam; k++){
-		printf("A[%i] = %i\n", k, A[k]);
-	}*/
 	
 	printf("Agora insira um numero i para que a funcao mostre o vetor correspondente no arranjo: ");
 	

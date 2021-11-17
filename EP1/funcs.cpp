@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-int tam, i, q;
+int tam, i,d, q;
 int *A;
 
 void troca(int* a, int* b) {
@@ -13,21 +13,17 @@ void troca(int* a, int* b) {
   *b = tmp;
 }
 
-int Gerador(){
-	printf("digite a potencia de 10 para o tamanho do array: ");
-
+void Gerador(int* A){
+	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	scanf("%d", &d);
+	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
 	scanf("%d", &tam);
-
-	tam = pow(10,tam);
-
+	tam = d*pow(10,tam);
 	A = (int*)malloc(tam*sizeof(int));
-
 	srand(time(NULL));
-	
 	for (int j = 0; j < tam; j++){
-
 		A[j] = rand()%tam;
-	}
+		}
 }
 
 
@@ -68,7 +64,7 @@ int Selecao2(int* A,int i, int tam) {
 	}
 	
 	if (i < q){
-		
+	
 		tam = tam-1;
 		
 		return Selecao2(A, i, tam);

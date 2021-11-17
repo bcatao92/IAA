@@ -12,7 +12,7 @@ int main(){
 	
 	tInicio = clock();
 	int i, tam, d, q;
-	//Gerador();	
+	
 	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	scanf("%d", &d);
 	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
@@ -23,13 +23,13 @@ int main(){
 	for (int j = 0; j < tam; j++){
 		A[j] = rand()%tam;
 		}
-	
+
 	
 	printf("Agora insira o índice do vetor procurado: ");
 	
 	scanf("%i", &i);
 	
-	printf("%i", Selecao2(A, i, tam));
+	printf("O valor do vetor procurado é %i", Selecao2(A, i, tam));
 	
 	free(A);
 	tFim = clock();
