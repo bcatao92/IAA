@@ -14,7 +14,7 @@ void troca(int* a, int* b) {
 }
 
 void Gerador(int* A){
-	printf("Esta funÁ„o gera arranjos aleatÛrios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	printf("Esta fun√ß√£o gera arranjos aleat√≥rios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	scanf("%d", &d);
 	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
 	scanf("%d", &tam);
@@ -48,7 +48,57 @@ void quicksort(int* A, int tam) {
 }
 
 
-/*int Selecao2(int* A,int i, int tam) {
+	
+int Selecao1(){
+	
+	clock_t tInicio, tFim, tDecorrido;
+	
+	tInicio = clock();
+	int i, d, tam; 
+	
+	
+	printf("Esta fun√ß√£o gera arranjos aleat√≥rios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	
+	scanf("%d", &d);
+	
+	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
+	
+	scanf("%d", &tam);
+	
+	tam = d*pow(10,tam);
+	
+	A = (int*)malloc(tam*sizeof(int));
+
+	srand(time(NULL));
+	
+	for (int j = 0; j < tam; j++){
+
+		A[j] = rand()%tam;
+		}
+	
+	
+	quicksort(A, tam);
+	
+	
+	printf("Agora insira um numero i para que a funcao mostre o vetor correspondente no arranjo: ");
+	
+	scanf("%i", &i);
+	
+	if (i <=0) return false;
+	
+	printf("%i", A[i-1]);
+	
+	tFim = clock();
+	
+	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
+	
+	printf("\nTempo decorrido: %d milissegundos", tDecorrido);
+	
+	return 0;
+}
+
+
+int Selec2(int* A,int i, int tam) {
 	q = partition(A, tam);
 	if (tam ==1){
 		return A[0];
@@ -66,82 +116,33 @@ void quicksort(int* A, int tam) {
 	}
 	return A[q];
 	}
-*/	
-	
-	
-	
-int Selecao1(){
+
+
+
+int Selecao2(){
 	
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-/*	int i, d, tam; 
+	int i, tam, d, q;
 	
-	
-	printf("Esta funÁ„o gera arranjos aleatÛrios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
-	
+	printf("Esta fun√ß√£o gera arranjos aleat√≥rios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	scanf("%d", &d);
-	
 	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
-	
 	scanf("%d", &tam);
-	
 	tam = d*pow(10,tam);
-*/	
 	A = (int*)malloc(tam*sizeof(int));
-
 	srand(time(NULL));
-	
 	for (int j = 0; j < tam; j++){
-
 		A[j] = rand()%tam;
 		}
-	
-	
-	quicksort(A, tam);
-	
-	
-/*	printf("Agora insira um numero i para que a funcao mostre o vetor correspondente no arranjo: ");
+
+
+	printf("Agora insira o √≠ndice do vetor procurado: ");
 	
 	scanf("%i", &i);
-*/	
-	if (i <=0) return false;
 	
-	printf("%i", A[i-1]);
-	
-	tFim = clock();
-	
-	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
-	
-	printf("\nTempo decorrido: %d milissegundos", tDecorrido);
-	
-	return 0;
-}
-
-/*int Selecao2(){
-	
-	clock_t tInicio, tFim, tDecorrido;
-	
-	tInicio = clock();
-	int i, tam, d, q;
-	
-//	printf("Esta funÁ„o gera arranjos aleatÛrios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
-//	scanf("%d", &d);
-//	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
-//	scanf("%d", &tam);
-//	tam = d*pow(10,tam);
-	A = (int*)malloc(tam*sizeof(int));
-	srand(time(NULL));
-	for (int j = 0; j < tam; j++){
-		A[j] = rand()%tam;
-		}
-
-
-//	printf("Agora insira o Ìndice do vetor procurado: ");
-	
-//	scanf("%i", &i);
-	
-//	printf("O valor do vetor procurado È %i", Selecao2(A, i, tam));
+	printf("O valor do vetor procurado √© %i", Selec2(A, i, tam));
 	
 
 	free(A);
@@ -151,38 +152,5 @@ int Selecao1(){
 	return 0;
 	}
 
-*/
-
-/*int Selecao2(){
-	
-	clock_t tInicio, tFim, tDecorrido;
-	
-	tInicio = clock();
-	int i, tam, d, q;
-	
-//	printf("Esta funÁ„o gera arranjos aleatÛrios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
-//	scanf("%d", &d);
-//	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
-//	scanf("%d", &tam);
-//	tam = d*pow(10,tam);
-	A = (int*)malloc(tam*sizeof(int));
-	srand(time(NULL));
-	for (int j = 0; j < tam; j++){
-		A[j] = rand()%tam;
-		}
 
 
-//	printf("Agora insira o Ìndice do vetor procurado: ");
-	
-//	scanf("%i", &i);
-	
-//	printf("O valor do vetor procurado È %i", Selecao2(A, i, tam));
-	
-
-	free(A);
-	tFim = clock();
-	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
-	printf("\nTempo decorrido: %d milissegundos", tDecorrido);
-	return 0;
-	}
-*/
