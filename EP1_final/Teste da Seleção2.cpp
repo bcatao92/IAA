@@ -56,7 +56,7 @@ int main(){
 	int* A; 
 	iteracao = 0;
 
-	for (tam = 1 ; tam <8; tam++){
+	for (tam = 2 ; tam <9; tam++){
 
 
 	for (d = 1; d<=3; d++){
@@ -82,7 +82,7 @@ int main(){
 	tFim = clock();
 	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
 	iteracao++;
-	printf("Iteracao %i\nMultiplicador do array: %i,\nTamanho do array: %i\n Vetor i escolhido: %i \n Tempo decorrido: %d milissegundos", iteracao, tam, e, i,tDecorrido);
+	printf("\nIteracao %i\nMultiplicador do array: %i,\nTamanho do array: %i\nVetor i escolhido: %i \nTempo decorrido: %d milissegundos", iteracao, tam, e, i,tDecorrido);
 	}
 }
 	return 0;
