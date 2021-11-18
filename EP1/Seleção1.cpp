@@ -13,14 +13,13 @@ int main(){
 	int i, d, tam; 
 	
 	
-//	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
-	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Insira um numero inteiro, pressione enter, insira outro inteiro que sera a potencia de 10 que multiplicara o primeiro e pressione enter novamente: ");
-	//scanf("%d", &d);
-	scanf("%d", &d, &tam);
+	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	
-	//printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
+	scanf("%d", &d);
 	
-	//scanf("%d", &tam);
+	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
+	
+	scanf("%d", &tam);
 	
 	tam = d*pow(10,tam);
 	

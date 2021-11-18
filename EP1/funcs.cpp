@@ -26,13 +26,10 @@ void Gerador(int* A){
 		}
 }
 
-
-
 int partition(int* A, int tam) {
   int pivot = A[tam-1];
   int i = -1;
   int j;
-
   for(j = 0; j < tam-1; j++)
     if(A[j] <= pivot)
       troca(&A[++i], &A[j]);
@@ -45,41 +42,26 @@ void quicksort(int* A, int tam) {
   int q;
   if (tam > 0) {
     q = partition(A, tam);
-
     quicksort(A, q);
     quicksort(&A[q+1], tam - (q + 1));
-    
-  }
+    }
 }
 
 
 int Selecao2(int* A,int i, int tam) {
-	
 	q = partition(A, tam);
-	
 	if (tam ==1){
-		
 		return A[0];
-		
 	}
 	
 	if (i < q){
-	
 		tam = tam-1;
-		
-		return Selecao2(A, i, tam);
-		
+		return Selecao2(A, i, q);
 		}
 		
 	else { 
 	if (i > q){
-		
-		for(int k = 0; k < q; k++){
-			A[k] = NULL;
-			
-		}
-		
-		return Selecao2(A,i, tam);
+		return Selecao2(A,i, q);
 	}
 	}
 	return A[q];

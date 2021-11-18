@@ -24,13 +24,17 @@ int main(){
 		A[j] = rand()%tam;
 		}
 
-	
+
 	printf("Agora insira o índice do vetor procurado: ");
 	
 	scanf("%i", &i);
 	
 	printf("O valor do vetor procurado é %i", Selecao2(A, i, tam));
 	
+	for (int r = tam-100; r < tam; r++){
+		printf("A[%i] = %i\n", r, A[r]);		
+	}
+
 	free(A);
 	tFim = clock();
 	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
