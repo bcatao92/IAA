@@ -13,7 +13,7 @@ int main(){
 	tInicio = clock();
 	int i, tam, d, q;
 	
-	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
+	printf("Esta funÃ§Ã£o gera arranjos aleatÃ³rios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
 	scanf("%d", &d);
 	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
 	scanf("%d", &tam);
@@ -25,11 +25,11 @@ int main(){
 		}
 
 
-	printf("Agora insira o índice do vetor procurado: ");
+	printf("Agora insira o Ã­ndice do vetor procurado: ");
 	
 	scanf("%i", &i);
 	
-	printf("O valor do vetor procurado é %i", Selecao2(A, i, tam));
+	printf("O valor do vetor procurado Ã© %i", Selecao2(A, i, tam));
 	
 
 	free(A);
