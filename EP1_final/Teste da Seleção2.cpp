@@ -56,7 +56,7 @@ int main(){
 	int* A; 
 	iteracao = 0;
 
-	for (tam = 1 ; tam <9; tam++){
+	for (tam = 1 ; tam <8; tam++){
 
 
 	for (d = 1; d<=3; d++){
