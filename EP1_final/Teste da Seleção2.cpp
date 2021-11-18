@@ -1,42 +1,89 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "funcs.cpp"
+//#include "funcs.cpp"
 #include <time.h>
 
 //Sele?ao2(A,i)
+int q, e, i;
+int* A;
+
+void troca(int* a, int* b) {
+  int tmp;
+  tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+
+int partition(int* A, int e) {
+  int pivot = A[e-1];
+  int i = -1;
+  int j;
+  for(j = 0; j < e-1; j++)
+    if(A[j] <= pivot)
+      troca(&A[++i], &A[j]);
+  troca(&A[i+1], &A[j]);
+
+  return i + 1;
+}
+
+int Selecao2(int* A,int i, int e) {
+	q = partition(A, e);
+	if (e ==1){
+		return A[0];
+	}
+	
+	if (i < q){
+		e = e-1;
+		return Selecao2(A, i, q);
+		}
+		
+	else { 
+	if (i > q){
+		return Selecao2(A,i, q);
+	}
+	}
+	return A[q];
+	}
+	
 
 int main(){
 	
 	clock_t tInicio, tFim, tDecorrido;
 	
 	tInicio = clock();
-	int i, tam, d, q;
+	int i, d, tam, e, iteracao;
+	int* A; 
+	iteracao = 0;
+
+	for (tam = 1 ; tam <9; tam++){
+
+
+	for (d = 1; d<=3; d++){
+	if (d == 1){
+	i = 25;}
+	if (d == 2){
+	i = 56;}
+	if (d == 3) {
+	i = 225;}
 	
-	printf("Esta função gera arranjos aleatórios de acordo com dois numeros. Primeiro, insira um numero inteiro a seguir: ");
-	scanf("%d", &d);
-	printf("Agora insira uma potencia de 10 para multiplicar o inteiro inserido anteriormente: ");
-	scanf("%d", &tam);
-	tam = d*pow(10,tam);
-	A = (int*)malloc(tam*sizeof(int));
+	e = d*pow(10,tam);
+	
+	A = (int*)malloc(e*sizeof(int));
+
 	srand(time(NULL));
-	for (int j = 0; j < tam; j++){
-		A[j] = rand()%tam;
+	
+	for (int j = 0; j < e; j++){
+
+		A[j] = rand()%e;
 		}
-
-
-	printf("Agora insira o índice do vetor procurado: ");
 	
-	scanf("%i", &i);
-	
-	printf("O valor do vetor procurado é %i", Selecao2(A, i, tam));
-	
-
 	free(A);
 	tFim = clock();
 	tDecorrido = ((tFim - tInicio) / (CLOCKS_PER_SEC / 1000));
-	printf("\nTempo decorrido: %d milissegundos", tDecorrido);
+	iteracao++;
+	printf("Iteracao %i\nMultiplicador do array: %i,\nTamanho do array: %i\n Vetor i escolhido: %i \n Tempo decorrido: %d milissegundos", iteracao, tam, e, i,tDecorrido);
+	}
+}
 	return 0;
 	}
-
-
