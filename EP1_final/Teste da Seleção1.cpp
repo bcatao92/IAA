@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//#include "funcs.cpp"
 #include <time.h>
 
 //Sele??o1
@@ -49,9 +48,9 @@ int main(){
 	int* A; 
 	
 	iteracao = 0;	
-	for (tam = 1 ; tam <8; tam++){
+	for (tam = 2 ; tam <9; tam++){
 	
-	for (d = 1; d < 5; d++){
+	for (d = 1; d <=3; d++){
 
 	if (d == 1){
 	i = 25;}
@@ -60,10 +59,6 @@ int main(){
 	if (d == 3) {
 	i = 225;
 	}
-	if (d == 4) {
-	i = 4577;}
-	if (d == 5) {
-	i = 12348;}
 		
 	e = d*pow(10,tam);
 	
@@ -89,5 +84,4 @@ int main(){
 	}
 	return 0;
 }
-
 
